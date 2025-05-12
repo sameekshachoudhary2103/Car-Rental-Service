@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Car</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rent-yours.html">Rent Yours</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Book a Car</h1>
+        <p>Choose your car and book it instantly!</p>
+    </header>
+
+    <section class="booking-form">
+        <form id="bookingForm">
+            <label for="carSelect">Select Car:</label>
+            <select id="carSelect">
+                <option value="Tesla Model S">Tesla Model S</option>
+                <option value="BMW X5">BMW X5</option>
+                <option value="Audi A6">Audi A6</option>
+                <option value="Mercedes-Benz C-Class">Mercedes-Benz C-Class</option>
+                <option value="Ford Mustang">Ford Mustang</option>
+            </select>
+
+            <label for="rentalHours">Rental Hours:</label>
+            <input type="number" id="rentalHours" required>
+
+            <label for="userName">Your Name:</label>
+            <input type="text" id="userName" required>
+
+            <label for="userEmail">Your Email:</label>
+            <input type="email" id="userEmail" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById("bookingForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Your booking has been confirmed!");
+        });
+    </script>
+</body>
+</html>

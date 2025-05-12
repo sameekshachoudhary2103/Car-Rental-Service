@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Your Car</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rent-yours.html">Rent Yours</a></li>
+            <li><a href="booking.html">Booking</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Rent Your Car</h1>
+        <p>Earn money by listing your car for rent!</p>
+    </header>
+
+    <section class="rent-form">
+        <form id="rentForm">
+            <label for="carName">Car Name:</label>
+            <input type="text" id="carName" required>
+
+            <label for="carSpecs">Specifications:</label>
+            <input type="text" id="carSpecs" required>
+
+            <label for="carPrice">Rental Price per Hour:</label>
+            <input type="number" id="carPrice" required>
+
+            <label for="carImage">Upload Car Image:</label>
+            <input type="file" id="carImage" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById("rentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Your car has been listed for rent!");
+        });
+    </script>
+</body>
+</html>
